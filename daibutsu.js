@@ -16,7 +16,7 @@ var app = new Vue({
         flag: false,
         message: '',
         urlBase: 'https://twitter.com/intent/tweet?text=',
-        myUrl: 'https://shinoharata.github.io/daibutsu',
+        myUrl: 'https://shinoharata.github.io/daibutsu/',
         urlText: '',
         urlSuccess: 'さんは大仏を作りました！　',
         urlFailed: 'さんの大仏作りは失敗しました・・・　'
