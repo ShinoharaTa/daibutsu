@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>大仏建設</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="Shino3">
+
+    <!-- OGP -->
+    <meta property="og:site_name" content="大仏建設">
+    <meta property="og:title" content="大仏建設 | あなたの大仏を作ろう">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shinoharata.github.io/daibutsu/">
+    <meta property="og:image" content="https://shinoharata.github.io/daibutsu/img/daibutsu.png">
+    <!-- <meta property="fb:app_id" content="App-ID（15文字の半角数字）" /> -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@SHINOHARATTT">
+    <meta name="twitter:title" content="大仏建設 | あなたの大仏を作ろう" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="https://shinoharata.github.io/daibutsu/img/daibutsu.png">
+
+    <!-- favicon編 -->
+    <!-- <link rel="icon" type="image/x-icon" href="./img/favicon.ico"> -->
+
+    <!-- Vue.js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- font awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./shino3.1.0.1.css">
+    <link rel="stylesheet" href="./bootstrap_button_sns.css">
+
+</head>
+
+<body>
+    <div id="app" class="container text-center p-5 bg-light">
+        <h1>大仏を作ろう</h1>
+        <div class="pt-3" v-if="size == null">
+            <p>あなたの名前を入力</p>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" v-model="username">
+            <button class="btn btn-success btn-lg btn-block mt-3" @click="buildBuddha">大仏を建設する</button>
+        </div>
+        <div class="pt-3" v-else>
+            <p>{{username}}さんの大仏は...</p>
+            <img src="./img/daibutsu.svg" v-bind:style="{ width: size + '%' }">
+            <h3>{{message}}<br>サイズ：{{size}} ％</h3>
+            <div v-if="flag == true">
+                <button class="btn btn-success btn-block" @click="clearPage">あなたも大仏を作ろう！</button>
+            </div>
+            <div v-if="flag == false">
+                <a v-bind:href="url" class="btn bg-twitter btn-block text-white mt-3">Twitterに投稿する</a>
+                <button class="btn btn-success btn-block" @click="buildBuddha">大仏を作り直す</button>
+            </div>
+        </div>
+        <div class="pt-3 text-center">
+            <p>お借りした大仏様 <a href="https://icon-rainbow.com/%E5%A4%A7%E4%BB%8F%E3%81%AE%E7%84%A1%E6%96%99%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E7%B4%A0%E6%9D%90-1/">Icon-rainbow</a></p>
+            <p>&copy 2018 <a href="https://shino3.net/">T.Shiohara</a> all right reserved.</p>
+        </div>
+    </div>
+    <script src="./daibutsu.js"></script>
+</body>
+
+</html>

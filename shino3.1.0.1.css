@@ -1,0 +1,44 @@
+:root{
+    --font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, 'Open Sans', sans-serif;
+}
+
+.container {
+    background-color: #EEE;
+}
+
+/* p {
+    text-align: justify;
+} */
+
+.headerNavBtn{
+    text-align:center;
+    height:3em;
+    line-height:3em;
+    color:#EEE;
+    font-size:16px;
+}
+
+.btn {
+    border-radius: 2px;
+}
+
+.btn-small {
+    border-radius: 1px;
+}
+
+.btn-large {
+    border-radius: 3px;
+}
+
+/* .headerNavBtn:hover{
+    background:#EEE;
+} */
