@@ -25,7 +25,7 @@ var app = new Vue({
         url: function() {
             var gen_url = this.urlBase + this.username + this.urlText + this.myUrl;
             if (this.username != '') {
-                gen_url = gen_url + '?name=' + this.username;
+                gen_url = gen_url + '?name=' + encodeURIComponent(this.username);
             }
             if (this.size != null) {
                 gen_url = gen_url + '$size=' + this.size;
@@ -66,7 +66,7 @@ var app = new Vue({
             arg[kv[0]] = kv[1];
         }
         if (arg['name'] != undefined) {
-            this.username = escapeHtml(arg['name']);
+            this.username = decodeURI(escapeHtml(arg['name']));
             this.flag = true;
         }
         if (arg['size'] != undefined) {
